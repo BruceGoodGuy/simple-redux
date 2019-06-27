@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, {Component} from 'react';
+import ResultContainer from './containers/Result';
+import HomeContainer from './containers/Text';
+class App extends Component{
+  render(){
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6 mt-2 mb-2 shadow p-3 mb-5 bg-white rounded">
+                    <HomeContainer></HomeContainer>
+                </div>
+                <div className="col-md-6 mt-2 mb-2 shadow p-3 mb-5 bg-white rounded">
+                    <ResultContainer></ResultContainer>
+                </div>
+            </div>
+        </div>
+    );
+  }
 }
 
 export default App;
